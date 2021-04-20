@@ -1,0 +1,86 @@
+.light {
+  padding-bottom: 100px;
+  width: 100%;
+  .light-container {
+    display: flex;
+    justify-content: space-around;
+
+    @include small() {
+      justify-content: center;
+    }
+  }
+
+  .light__content {
+    padding-top: 40px;
+    width: 540px;
+
+    @include small() {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .light__title {
+      @include title();
+    }
+
+    .light__text {
+      @include text();
+      margin-bottom: 90px;
+
+      @include small() {
+        margin-bottom: 20px;
+      }
+    }
+
+    .light__items {
+      display: flex;
+
+      @include small() {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .item {
+        margin-right: 30px;
+        width: 255px;
+
+        @include small() {
+          width: auto;
+          margin: 10px 0;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .item__img {
+        }
+
+        .item__title {
+          margin: 20px 0 10px 0;
+          font-size: 16px;
+          font-family: "Roboto-Bold";
+          line-height: 26px;
+          color: #091133;
+        }
+
+        .item__text {
+          font-size: 12px;
+          font-family: "Roboto-Light";
+          line-height: 18px;
+          color: #5d6970;
+        }
+      }
+    }
+  }
+
+  .light__img {
+    @include small() {
+      display: none;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+}

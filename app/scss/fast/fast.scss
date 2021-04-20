@@ -1,0 +1,49 @@
+@import "../mixins/mixin.scss";
+
+.fast {
+  padding: 100px 0;
+
+  @include small() {
+    padding: 10px 0;
+  }
+
+  .fast__block {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 200px;
+
+    @include small() {
+      flex-direction: column;
+      margin-bottom: 100px;
+    }
+
+    .fast__img {
+      img {
+        @include small() {
+          width: 300px;
+        }
+      }
+    }
+
+    .fast__content {
+      width: 450px;
+
+      @include small() {
+        text-align: center;
+      }
+
+      .fast__title {
+        @include title();
+
+        @include small() {
+          margin: 20px 0;
+        }
+      }
+
+      .fast__text {
+        @include text();
+      }
+    }
+  }
+}

@@ -1,0 +1,79 @@
+@import "../mixins/mixin.scss";
+
+.footer {
+  background: #e7ecff;
+
+  .footer__top {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 65px 0 40px 0;
+
+    .footer__copyright {
+      font-family: "Roboto-Light";
+      font-size: 20px;
+      line-height: 24px;
+      color: #939ea4;
+
+      @include small() {
+        font-size: 15px;
+      }
+    }
+
+    .footer__logo {
+      @include logo();
+
+      @include small() {
+        font-size: 40px;
+      }
+    }
+  }
+
+  .footer__bottom {
+    padding: 25px 0;
+    border-top: 1px solid #cdd1d4;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .footer__nav {
+      font-family: "Roboto-Light";
+      font-size: 18px;
+      line-height: 24px;
+      color: #929ecc;
+
+      @include small() {
+        font-size: 15px;
+      }
+
+      ul {
+        padding: 0;
+        margin: 0;
+        display: flex;
+
+        li {
+          list-style: none;
+        }
+
+        li:hover {
+          cursor: pointer;
+        }
+
+        li:not(:last-child) {
+          margin-right: 60px;
+        }
+      }
+    }
+
+    .footer__social {
+      display: flex;
+
+      .social {
+      }
+      .social:not(:last-child) {
+        margin-right: 35px;
+      }
+    }
+  }
+}

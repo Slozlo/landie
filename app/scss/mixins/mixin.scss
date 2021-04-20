@@ -1,0 +1,38 @@
+@mixin title() {
+  font-size: 36px;
+  font-family: "Roboto-Bold";
+  color: #091133;
+  margin-bottom: 16px;
+}
+
+@mixin text() {
+  font-family: "Roboto-Light";
+  font-size: 16px;
+  line-height: 26px;
+  color: #6f7cb2;
+}
+
+@mixin logo() {
+  font-weight: 900;
+  font-family: "Roboto-Bold";
+  font-size: 50px;
+  color: #37447e;
+}
+
+@mixin large() {
+  @media (max-width: 1800px) {
+    @content;
+  }
+}
+
+@mixin medium() {
+  @media (max-width: 1389px) {
+    @content;
+  }
+}
+
+@mixin small() {
+  @media (max-width: 1100px) {
+    @content;
+  }
+}
